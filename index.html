@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrantAgent AI — Drexel CS-T680</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+        .header { background: #1e3a5f; padding: 32px 24px 24px; text-align: center; border-bottom: 3px solid #4f46e5; }
+        .header h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: -0.5px; }
+        .header .sub { color: #94a3b8; font-size: 0.9rem; margin-top: 6px; }
+        .header .team { color: #818cf8; font-size: 0.85rem; margin-top: 4px; }
+        .badge { display: inline-block; background: #16a34a; color: #fff; font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 99px; letter-spacing: 0.1em; text-transform: uppercase; margin-left: 10px; vertical-align: middle; }
+        .container { max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+        .section { margin-bottom: 32px; }
+        .section h2 { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #64748b; margin-bottom: 14px; }
+        .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; margin-bottom: 12px; }
+        .card a { color: #818cf8; text-decoration: none; font-weight: 600; font-size: 1rem; }
+        .card a:hover { color: #a5b4fc; text-decoration: underline; }
+        .card .desc { color: #94a3b8; font-size: 0.82rem; margin-top: 4px; }
+        .timestamps { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+        .timestamps th { text-align: left; color: #64748b; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0 12px 8px 0; }
+        .timestamps td { padding: 8px 12px 8px 0; border-top: 1px solid #1e293b; vertical-align: top; }
+        .timestamps tr:first-child td { border-top: none; }
+        .time { color: #818cf8; font-weight: 700; font-family: monospace; white-space: nowrap; }
+        .live-time { color: #34d399; font-weight: 700; font-family: monospace; white-space: nowrap; }
+        .speaker { color: #f8fafc; font-weight: 600; }
+        .note { color: #94a3b8; font-size: 0.78rem; }
+        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .stat { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px 16px; }
+        .stat .number { font-size: 1.6rem; font-weight: 800; color: #818cf8; }
+        .stat .label { font-size: 0.75rem; color: #64748b; margin-top: 2px; }
+        .cycle-note { background: #1e3a2f; border: 1px solid #166534; border-radius: 10px; padding: 14px 16px; color: #86efac; font-size: 0.82rem; line-height: 1.6; }
+        .cycle-note strong { color: #4ade80; }
+        .qr-note { text-align: center; color: #64748b; font-size: 0.78rem; margin-top: 24px; padding-top: 20px; border-top: 1px solid #1e293b; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>GrantAgent AI <span class="badge">Live</span></h1>
+    <p class="sub">Drexel University CS-T680 &mdash; Spring 2026</p>
+    <p class="team">Jaya Chauhan &nbsp;&middot;&nbsp; Atif Sheikh &nbsp;&middot;&nbsp; Abhishek Todankar</p>
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Watch &amp; Explore</h2>
+        <div class="card">
+            <a href="https://youtu.be/h78sSeNmcXg" target="_blank">Full Presentation (12 min) &rarr;</a>
+            <p class="desc">Architecture walkthrough, live demo, and Twelve Gates Arts partnership overview.</p>
+        </div>
+        <div class="card">
+            <a href="https://gitlab.cci.drexel.edu/afs78/grantagent-ai" target="_blank">GitHub Repository (https://gitlab.cci.drexel.edu/afs78/grantagent-ai)&rarr;</a>
+            <p class="desc">Full source code, database schema, agent implementations, and setup guide.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>You just joined — here's where we are</h2>
+        <div class="cycle-note">
+            <strong>Each cycle is 6 minutes.</strong> Check the timer on screen to see where we are in the current cycle, then find that row below to catch up instantly.
+        </div>
+        <br>
+        <div class="card" style="padding: 16px 20px;">
+            <table class="timestamps">
+                <thead>
+                    <tr>
+                        <th>Live timer</th>
+                        <th>What's happening</th>
+                        <th>YouTube</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="live-time">0:00</span></td>
+                        <td>
+                            <span class="speaker">Jaya</span> — Problem &amp; 12Gates partnership<br>
+                            <span class="note">Why nonprofits need this. Our real-world partner.</span>
+                        </td>
+                        <td><a href="https://youtu.be/h78sSeNmcXg?t=0" target="_blank" style="font-size:0.78rem;"><span class="time">0:00</span></a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="live-time">1:30</span></td>
+                        <td>
+                            <span class="speaker">Abhishek</span> — Architecture<br>
+                            <span class="note">Four agents, dual database, LiteLLM routing, cost profile.</span>
+                        </td>
+                        <td><a href="https://youtu.be/h78sSeNmcXg?t=90" target="_blank" style="font-size:0.78rem;"><span class="time">1:30</span></a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="live-time">3:30</span></td>
+                        <td>
+                            <span class="speaker">Atif</span> — Live demo begins<br>
+                            <span class="note">Onboarding a new org, building Organizational DNA.</span>
+                        </td>
+                        <td><a href="https://youtu.be/h78sSeNmcXg?t=210" target="_blank" style="font-size:0.78rem;"><span class="time">3:30</span></a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="live-time">4:30</span></td>
+                        <td>
+                            <span class="speaker">Atif</span> — Grant analysis &amp; draft generation<br>
+                            <span class="note">Real-time agent reasoning, fit scoring, outline vs draft mode.</span>
+                        </td>
+                        <td><a href="https://youtu.be/h78sSeNmcXg?t=270" target="_blank" style="font-size:0.78rem;"><span class="time">4:30</span></a></td>
+                    </tr>
+                    <tr>
+                        <td><span class="live-time">6:00</span></td>
+                        <td>
+                            <span class="speaker">New cycle starts</span><br>
+                            <span class="note">Timer resets. Jaya begins again.</span>
+                        </td>
+                        <td><a href="https://youtu.be/h78sSeNmcXg?t=0" target="_blank" style="font-size:0.78rem;"><span class="time">0:00</span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Key Numbers</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="number">137</div>
+                <div class="label">Pennsylvania funders in database</div>
+            </div>
+            <div class="stat">
+                <div class="number">4 + 2</div>
+                <div class="label">Core agents + infrastructure agents</div>
+            </div>
+            <div class="stat">
+                <div class="number">$0.25</div>
+                <div class="label">Total Claude API spend in development</div>
+            </div>
+            <div class="stat">
+                <div class="number">88%</div>
+                <div class="label">Org profile completeness score</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>What is GrantAgent AI?</h2>
+        <div class="card" style="line-height:1.7; font-size:0.88rem; color:#cbd5e1;">
+            A four-agent AI system that helps nonprofits find matching grants and generate application drafts. Built in partnership with <strong style="color:#f8fafc;">Twelve Gates Arts Philadelphia</strong> using real grant data. The system handles discovery, org profiling, eligibility scoring, and draft generation — cutting 10&ndash;20 hours of manual work per application down to minutes. New: <strong style="color:#f8fafc;">Outline Mode</strong> produces structured topic guides instead of full AI prose, so grant writers never miss a required focus area while writing in their own voice.
+        </div>
+    </div>
+
+    <div class="qr-note">
+        You scanned this QR code from the GrantAgent AI booth &mdash; Group 6
+    </div>
+
+</div>
+</body>
+</html>
